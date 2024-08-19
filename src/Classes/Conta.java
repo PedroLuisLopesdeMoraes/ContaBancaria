@@ -2,7 +2,7 @@ package Classes;
 
 public class Conta {
     private String cliente;
-    private int numConta;
+    private int AGENCIA;
     private double saldoConta;
 
 
@@ -12,11 +12,11 @@ public class Conta {
     public void setCliente(String cliente) {
         this.cliente = cliente;
     }
-    public int getNumConta() {
-        return numConta;
+    public int getAGENCIA() {
+        return AGENCIA;
     }
-    public void setNumConta(int numConta) {
-        this.numConta = numConta;
+    public void setAGENCIA(int AGENCIA) {
+        this.AGENCIA = AGENCIA;
     }
     public double getSaldoConta() {
         return saldoConta;
@@ -26,16 +26,16 @@ public class Conta {
     }
 
     public void deposita (double valor){
-        saldoConta = valor + saldoConta;
-        System.out.println("Novo saldo: " + saldoConta);
+        saldoConta += valor;
+        System.out.println("Novo saldo: R$ " + saldoConta);
     }
 
     public void saca (double valor){
         if (valor > saldoConta) {
             System.out.println("Saldo insuficiente");
         }else {
-            this.saldoConta = saldoConta - valor;
-            System.out.println("Novo saldo: " + saldoConta);
+            this.saldoConta -= valor;
+            System.out.println("Novo saldo: R$ " + saldoConta);
         }
     }
 
