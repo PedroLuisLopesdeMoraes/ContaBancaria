@@ -25,15 +25,17 @@ public class Conta {
         this.saldoConta = saldoConta;
     }
 
-    public double deposita (double valor){
-        return saldoConta = valor + saldoConta;
+    public void deposita (double valor){
+        saldoConta = valor + saldoConta;
+        System.out.println("Novo saldo: " + saldoConta);
     }
 
     public void saca (double valor){
         if (valor > saldoConta) {
             System.out.println("Saldo insuficiente");
         }else {
-            this.saldoConta = saldoConta - valor ;
+            this.saldoConta = saldoConta - valor;
+            System.out.println("Novo saldo: " + saldoConta);
         }
     }
 

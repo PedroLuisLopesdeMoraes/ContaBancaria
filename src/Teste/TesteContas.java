@@ -13,9 +13,8 @@ public class TesteContas {
 
         c1.deposita(100);
 
-        System.out.println("novo saldo: " + c1.getSaldoConta());
+        //System.out.println("novo saldo: " + c1.getSaldoConta());
 
         c1.saca(900);
-        System.out.println("Saldo: " + c1.getSaldoConta());
     }
 }
