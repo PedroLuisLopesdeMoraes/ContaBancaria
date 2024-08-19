@@ -20,7 +20,6 @@ public class ContaCorrente extends Conta {
             System.out.println("Limite cheque especial: R$ " + chequeEspecial);
         }
     }
-
     public void limiteCredito (){
         if (getSaldoConta() >= 2500){
             limiteCredito = getSaldoConta() * 0.3;
