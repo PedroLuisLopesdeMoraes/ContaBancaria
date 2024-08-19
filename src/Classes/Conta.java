@@ -29,4 +29,12 @@ public class Conta {
         return saldoConta = valor + saldoConta;
     }
 
+    public void saca (double valor){
+        if (valor > saldoConta) {
+            System.out.println("Saldo insuficiente");
+        }else {
+            this.saldoConta = saldoConta - valor ;
+        }
+    }
+
 }
