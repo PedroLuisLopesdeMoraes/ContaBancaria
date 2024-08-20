@@ -1,5 +1,7 @@
 package Classes;
 
+import java.security.SecureRandom;
+
 public class Conta {
     private String cliente;
     private int AGENCIA;
@@ -39,4 +41,9 @@ public class Conta {
         }
     }
 
+    public void geraAgencia() {
+        SecureRandom secureRandom = new SecureRandom();
+        int numAgencia = secureRandom.nextInt(90) + 10;
+        System.out.println("Número da agência: " + numAgencia);
+    }
 }

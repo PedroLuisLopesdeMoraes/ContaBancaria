@@ -1,5 +1,7 @@
 package Classes;
 
+import java.security.SecureRandom;
+
 public class ContaCorrente extends Conta {
     private int contaCorrente;
     private double chequeEspecial;
