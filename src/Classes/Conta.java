@@ -5,11 +5,17 @@ import java.security.SecureRandom;
 public class Conta {
     private String cliente;
     private int AGENCIA;
+
+    public Conta(String cliente, double saldoConta) {
+        this.cliente = cliente;
+        this.saldoConta = saldoConta;
+    }
+
     private double saldoConta;
 
 
-    public String getCliente() {
-        return cliente;
+    public void nomeCliente() {
+        System.out.println("Cliente: " + this.cliente);
     }
     public void setCliente(String cliente) {
         this.cliente = cliente;
@@ -17,6 +23,7 @@ public class Conta {
     public int getAGENCIA() {
         return AGENCIA;
     }
+
     public void setAGENCIA(int AGENCIA) {
         this.AGENCIA = AGENCIA;
     }
@@ -44,6 +51,10 @@ public class Conta {
     public void geraAgencia() {
         SecureRandom secureRandom = new SecureRandom();
         int numAgencia = secureRandom.nextInt(90) + 10;
-        System.out.println("Número da agência: " + numAgencia);
+        this.AGENCIA = Integer.parseInt(String.valueOf(numAgencia)); // Armazena o número da agência
+        System.out.println("Número da agência: " + AGENCIA);
+    }
+    public int getAgencia(){
+        return AGENCIA;
     }
 }

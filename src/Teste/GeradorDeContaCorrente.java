@@ -7,25 +7,34 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GeradorDeContaCorrente extends ContaCorrente {
+
+
+    public GeradorDeContaCorrente(String cliente, double saldoConta) {
+        super(cliente, saldoConta);
+    }
+
     public static void main(String[] args) {
         List<Object> contasCorrentes = new ArrayList<>();
         Scanner leitura = new Scanner(System.in);
 
-        System.out.println("Digite a quantidade contas a criar: ");
-        int qtdContas = leitura.nextInt();
+        while (true){
+            leitura.nextLine();
+            System.out.println("Nome do cliente (ou sair para encerrar): ");
+            String cliente = leitura.nextLine();
 
+            if (cliente.equalsIgnoreCase("sair")){
+                break;
+            }
 
-        for (int i = 0; i < qtdContas; i++) {
+            System.out.println("Deposito inicial: ");
+            double saldo = leitura.nextDouble();
 
-            System.out.println("Nome do cliente: ");
-            String cliente = leitura.next();
-
-            ContaCorrente contaCliente = new ContaCorrente();
-
+            ContaCorrente contaCliente = new ContaCorrente(cliente, saldo);
             contasCorrentes.add(contaCliente);
 
-
         }
+
+        System.out.println(contasCorrentes.getFirst());
         System.out.println(contasCorrentes);
 
     }

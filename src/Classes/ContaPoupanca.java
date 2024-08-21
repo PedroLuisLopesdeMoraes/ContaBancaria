@@ -3,6 +3,12 @@ package Classes;
 public class ContaPoupanca extends Conta{
     private int contaPoupanca;
     private double rendimento;
+
+    public ContaPoupanca(String cliente, double saldoConta) {
+        super(cliente, saldoConta);
+    }
+
+
     public int getContaPoupanca() {
         return contaPoupanca;
     }
@@ -20,5 +26,10 @@ public class ContaPoupanca extends Conta{
             System.out.println("Rendimento mensal médio: R$ " + rendimento);
         }
 
+    }
+    @Override
+    public String toString() {
+        return "Cliente = " + getCliente() +
+                ", Saldo = R$ " + getSaldoConta() ;
     }
 }
