@@ -13,10 +13,10 @@ public class Conta {
 
     private double saldoConta;
 
-
-    public void nomeCliente() {
-        System.out.println("Cliente: " + this.cliente);
+    public String getCliente() {
+        return cliente;
     }
+
     public void setCliente(String cliente) {
         this.cliente = cliente;
     }
@@ -52,7 +52,7 @@ public class Conta {
         SecureRandom secureRandom = new SecureRandom();
         int numAgencia = secureRandom.nextInt(90) + 10;
         this.AGENCIA = Integer.parseInt(String.valueOf(numAgencia)); // Armazena o número da agência
-        System.out.println("Número da agência: " + AGENCIA);
+        //System.out.println("Número da agência: " + AGENCIA);
     }
     public int getAgencia(){
         return AGENCIA;

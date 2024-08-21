@@ -33,9 +33,9 @@ public class GeradorDeContaCorrente extends ContaCorrente {
             contasCorrentes.add(contaCliente);
 
         }
-
-        System.out.println(contasCorrentes.getFirst());
-        System.out.println(contasCorrentes);
-
+        //System.out.println(contasCorrentes);
+        for (Object contas : contasCorrentes){
+            System.out.println(contas);
+        }
     }
 }
